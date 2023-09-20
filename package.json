@@ -1,9 +1,9 @@
 {
   "name": "logyardbackend",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "Winston wrapper for backend logging",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:commonjs": "babel index.mjs --out-dir lib",
