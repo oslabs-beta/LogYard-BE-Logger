@@ -1,19 +1,26 @@
 {
-  "name": "logyard",
-  "version": "1.0.10",
-  "description": "Logger for Log Yard",
-  "main": "lib/index.js",
+  "name": "logyardbackend",
+  "version": "1.0.1",
+  "type": "module",
+  "description": "Winston wrapper for backend logging",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:commonjs": "babel index.mjs --out-dir lib",
     "build:umd": "cross-env FILE_NAME=logyard webpack",
     "build:umd:min": "cross-env NODE_ENV=production npm run build:umd",
     "clean": "rimraf lib dist",
-    "build": "npm run clean && npm run build:commonjs && npm run build:umd && npm run build:umd:min"
-
-  },
-  "author": "OSP 7",
+    "build": "npm run clean && npm run build:commonjs && npm run build:umd && npm run build:umd:min"  
+    },
+  "author": "OSP7",
   "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "process": "^0.11.10",
+    "winston": "^3.10.0",
+    "winston-mongodb": "^5.1.1"
+  },
   "devDependencies": {
     "@babel/cli": "^7.22.15",
     "@babel/core": "^7.22.20",
