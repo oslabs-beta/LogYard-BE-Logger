@@ -1,8 +1,9 @@
 {
   "name": "logyardbackend",
-  "version": "1.0.57",
+  "version": "1.0.64",
   "description": "Winston wrapper for backend logging",
-  "main": "indexCJS.cjs",
+  "source": "index.js",
+  "main": "dist/indexCJS.cjs",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,28 +11,20 @@
     "build:umd": "cross-env FILE_NAME=logyardfrontend webpack",
     "build:umd:min": "cross-env NODE_ENV=production npm run build:umd",
     "clean": "rimraf lib dist",
-    "build": "npm run clean && npm run build:commonjs && npm run build:umd && npm run build:umd:min"
+    "build": "npm run clean && npm run build:commonjs && npm run build:umd && npm run build:umd:min",
+    "buildParcel": "parcel build"
   },
   "author": "OSP7",
   "license": "ISC",
   "dependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.22.15",
     "config": "^3.3.9",
     "winston": "^3.10.0",
     "winston-mongodb": "^5.1.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.22.15",
-    "@babel/core": "^7.22.20",
-    "@babel/preset-env": "^7.22.20",
     "cross-env": "^7.0.3",
-    "node-polyfill-webpack-plugin": "^2.0.1",
     "parcel": "^2.9.3",
     "path": "^0.12.7",
-    "punycode": "^1.4.1",
-    "rimraf": "^5.0.1",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4",
-    "wrapper-webpack-plugin": "^2.2.2"
+    "rimraf": "^5.0.1"
   }
 }
