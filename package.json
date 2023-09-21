@@ -1,12 +1,12 @@
 {
   "name": "logyardbackend",
-  "version": "1.0.43",
+  "version": "1.0.57",
   "description": "Winston wrapper for backend logging",
-  "main": "/dist/logyardfrontend.min.js",
+  "main": "indexCJS.cjs",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:commonjs": "babel index.js --out-dir lib",
+    "build:commonjs": "babel index.js -o indexCJS.cjs",
     "build:umd": "cross-env FILE_NAME=logyardfrontend webpack",
     "build:umd:min": "cross-env NODE_ENV=production npm run build:umd",
     "clean": "rimraf lib dist",
@@ -15,6 +15,7 @@
   "author": "OSP7",
   "license": "ISC",
   "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.22.15",
     "config": "^3.3.9",
     "winston": "^3.10.0",
     "winston-mongodb": "^5.1.1"
