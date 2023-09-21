@@ -1,8 +1,8 @@
 {
   "name": "logyardbackend",
-  "version": "1.0.36",
+  "version": "1.0.43",
   "description": "Winston wrapper for backend logging",
-  "main": "dist/logyardfrontend.min.js",
+  "main": "/dist/logyardfrontend.min.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -28,6 +28,7 @@
     "path": "^0.12.7",
     "rimraf": "^5.0.1",
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "wrapper-webpack-plugin": "^2.2.2"
   }
 }
