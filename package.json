@@ -1,6 +1,6 @@
 {
   "name": "logyardbackend",
-  "version": "1.0.32",
+  "version": "1.0.33",
   "description": "Winston wrapper for backend logging",
   "main": "index.js",
   "type": "module",
@@ -16,10 +16,6 @@
   "license": "ISC",
   "dependencies": {
     "config": "^3.3.9",
-    "fs": "^0.0.1-security",
-    "mongodb": "^6.1.0",
-    "path": "^0.12.7",
-    "process": "^0.11.10",
     "winston": "^3.10.0",
     "winston-mongodb": "^5.1.1"
   },
@@ -29,6 +25,7 @@
     "@babel/preset-env": "^7.22.20",
     "cross-env": "^7.0.3",
     "node-polyfill-webpack-plugin": "^2.0.1",
+    "path": "^0.12.7",
     "rimraf": "^5.0.1",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
