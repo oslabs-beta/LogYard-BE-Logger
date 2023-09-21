@@ -1,6 +1,6 @@
 {
   "name": "logyardbackend",
-  "version": "1.0.14",
+  "version": "1.0.18",
   "description": "Winston wrapper for backend logging",
   "main": "index.js",
   "type": "module",
@@ -15,6 +15,7 @@
   "author": "OSP7",
   "license": "ISC",
   "dependencies": {
+    "config": "^3.3.9",
     "fs": "^0.0.1-security",
     "mongodb": "^6.1.0",
     "path": "^0.12.7",
