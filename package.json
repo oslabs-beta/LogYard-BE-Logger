@@ -1,6 +1,6 @@
 {
   "name": "logyardbackend",
-  "version": "1.0.18",
+  "version": "1.0.32",
   "description": "Winston wrapper for backend logging",
   "main": "index.js",
   "type": "module",
