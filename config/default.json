@@ -1,0 +1,4 @@
+{
+  "uri": "mongodb://mongodb:27017",
+  "level": "silly"
+}
