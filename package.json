@@ -1,6 +1,6 @@
 {
   "name": "logyard-be",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "Winston wrapper for backend logging, built for Log Yard",
   "source": "index.js",
   "main": "dist/indexCJS.cjs",

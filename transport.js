@@ -6,6 +6,7 @@ import config from 'config';
 
 const uri = config.get('uri');
 const level = config.get('level');
+const dbName = config.get('dbName');
 
 export default createLogger({
   transports: [
@@ -30,7 +31,7 @@ export default createLogger({
         useUnifiedTopology: true,
       },
       // dbName and collection MUST match the location at which the mongo server is pointing to in db.js!
-      dbName: 'your_database_name',
+      dbName: `${dbName || 'LogYard'}`,
       collection: 'logs',
       format: format.combine(
         format.json(),

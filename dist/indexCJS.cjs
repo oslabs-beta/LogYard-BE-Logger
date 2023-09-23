@@ -19,6 +19,7 @@ $parcel$export(module.exports, "removeContextExp", () => $43d7963e56408b24$expor
 
 const $59153805fe1312d8$var$uri = (0, ($parcel$interopDefault($c5L0i$config))).get("uri");
 const $59153805fe1312d8$var$level = (0, ($parcel$interopDefault($c5L0i$config))).get("level");
+const $59153805fe1312d8$var$dbName = (0, ($parcel$interopDefault($c5L0i$config))).get("dbName");
 var $59153805fe1312d8$export$2e2bcd8739ae039 = (0, $c5L0i$winston.createLogger)({
     transports: [
         /* !LOGGER TEMPLATE!
@@ -39,8 +40,8 @@ var $59153805fe1312d8$export$2e2bcd8739ae039 = (0, $c5L0i$winston.createLogger)(
             options: {
                 useUnifiedTopology: true
             },
-            // dbName and collection MUST match the location at which the mongo server is pointing to in db.js!
-            dbName: "your_database_name",
+            dbName: // dbName and collection MUST match the location at which the mongo server is pointing to in db.js!
+            $59153805fe1312d8$var$dbName,
             collection: "logs",
             format: (0, $c5L0i$winston.format).combine((0, $c5L0i$winston.format).json(), (0, $c5L0i$winston.format).metadata())
         })
