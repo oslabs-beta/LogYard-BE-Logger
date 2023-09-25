@@ -40,8 +40,8 @@ var $59153805fe1312d8$export$2e2bcd8739ae039 = (0, $c5L0i$winston.createLogger)(
             options: {
                 useUnifiedTopology: true
             },
-            dbName: // dbName and collection MUST match the location at which the mongo server is pointing to in db.js!
-            $59153805fe1312d8$var$dbName,
+            // dbName and collection MUST match the location at which the mongo server is pointing to in db.js!
+            dbName: `${$59153805fe1312d8$var$dbName || "LogYard"}`,
             collection: "logs",
             format: (0, $c5L0i$winston.format).combine((0, $c5L0i$winston.format).json(), (0, $c5L0i$winston.format).metadata())
         })
@@ -50,6 +50,7 @@ var $59153805fe1312d8$export$2e2bcd8739ae039 = (0, $c5L0i$winston.createLogger)(
 
 
 const $43d7963e56408b24$export$317ecf0a65c11642 = (level, msg, Context = {})=>{
+    for(const key in Context)if (typeof Context[key] === "object") Context[key] = "INVALID CONTEXT";
     if (level === "error") (0, $59153805fe1312d8$export$2e2bcd8739ae039).error(msg, {
         Context: Context
     });

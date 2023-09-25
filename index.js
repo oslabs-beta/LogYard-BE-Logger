@@ -1,6 +1,12 @@
 import logger from './transport';
 
 export const logyard = (level, msg, Context = {}) => {
+  for (const key in Context) {
+    if (typeof Context[key] === 'object') {
+      Context[key] = 'INVALID CONTEXT';
+    }
+  }
+  
   if (level === 'error') logger.error(msg, {Context})  
   else if (level === 'warn') logger.warn(msg, {Context})
   else if (level === 'info') logger.info(msg, {Context})
